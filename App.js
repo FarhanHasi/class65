@@ -30,11 +30,9 @@ export default class App extends React.Component {
            }}>
             <Text style={styles.textStyle}> Go </Text>
             </TouchableOpacity>
-            <View> {this.state.chunks.map(item=>{
+            <View> {this.state.chunks.map((item,index) =>{
               return(
-                <TouchableOpacity style={styles.buttonC}>
-                  <Text style={styles.textC}>{item}</Text>
-                </TouchableOpacity>
+                <PhonixSound wordChunk={item} soundChunk={this.state.phones[index]}></PhonixSound>
               )})}</View>
             </View>
         
